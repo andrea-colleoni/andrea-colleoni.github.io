@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colleoni.INFO | IT Consulting & Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Custom CSS for parallax effects */
@@ -16,7 +18,7 @@
             min-height: 100vh;
             position: relative;
         }
-        
+
         .overlay {
             position: absolute;
             top: 0;
@@ -25,20 +27,20 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.6);
         }
-        
+
         .service-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        
+
         .nav-link {
             position: relative;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -49,11 +51,11 @@
             background-color: #3b82f6;
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
         }
-        
+
         @media (max-width: 768px) {
             .parallax {
                 background-attachment: scroll;
@@ -61,6 +63,7 @@
         }
     </style>
 </head>
+
 <body class="font-sans antialiased text-gray-100">
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-90 transition-all duration-300">
@@ -71,17 +74,23 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-4">
-                        <a href="#home" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400">Home</a>
-                        <a href="#services" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400">Services</a>
-                        <a href="#products" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400">Products</a>
-                        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400">About</a>
-                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400">Contact</a>
+                        <a href="#home"
+                            class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400">Home</a>
+                        <a href="#services"
+                            class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400">Services</a>
+                        <a href="#products"
+                            class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400">Products</a>
+                        <a href="#about"
+                            class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400">About</a>
+                        <a href="#contact"
+                            class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400">Contact</a>
                     </div>
                 </div>
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -91,23 +100,32 @@
         <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">Home</a>
-                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">Services</a>
-                <a href="#products" class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">Products</a>
+                <a href="#services"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">Services</a>
+                <a href="#products"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">Products</a>
                 <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">About</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">Contact</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="parallax bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80')]">
+    <section id="home"
+        class="parallax bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80')]">
         <div class="overlay"></div>
         <div class="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
             <h1 class="text-4xl md:text-6xl font-bold mb-6">Innovative SW Solutions</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl">Delivering cutting-edge technology services and products to help your business thrive in the digital age.</p>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl">Delivering cutting-edge technology services and products to
+                help your business thrive in the digital age.</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#services" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition duration-300">Our Services</a>
-                <a href="#contact" class="px-8 py-3 bg-transparent border-2 border-blue-400 hover:bg-blue-400 hover:bg-opacity-10 rounded-lg font-semibold transition duration-300">Get in Touch</a>
+                <a href="#services"
+                    class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition duration-300">Our
+                    Services</a>
+                <a href="#contact"
+                    class="px-8 py-3 bg-transparent border-2 border-blue-400 hover:bg-blue-400 hover:bg-opacity-10 rounded-lg font-semibold transition duration-300">Get
+                    in Touch</a>
             </div>
         </div>
     </section>
@@ -118,73 +136,77 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Our IT Consulting Services</h2>
                 <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-3xl mx-auto">We provide comprehensive IT solutions tailored to your business needs.</p>
+                <p class="text-gray-400 max-w-3xl mx-auto">We provide comprehensive IT solutions tailored to your
+                    business needs.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
+
                 <div class="service-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
                     <div class="p-6">
                         <div class="text-blue-400 text-4xl mb-4">
-                            <i class="fas fa-server"></i>
+                            <i class="fas fa-project-diagram"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Cloud Solutions</h3>
-                        <p class="text-gray-400">Migrate, optimize, and manage your cloud infrastructure with our expert guidance across AWS, Azure, and Google Cloud.</p>
+                        <h3 class="text-xl font-bold mb-2">Software Project Leadership</h3>
+                        <p class="text-gray-400">From analysis and design to methodology selection and full SDLC
+                            implementation, guiding teams to deliver successful projects with complete control and
+                            transparency.</p>
                     </div>
                 </div>
-                
-                <!-- Service 2 -->
+
                 <div class="service-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
                     <div class="p-6">
                         <div class="text-blue-400 text-4xl mb-4">
-                            <i class="fas fa-shield-alt"></i>
+                            <i class="fas fa-users-cog"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Cybersecurity</h3>
-                        <p class="text-gray-400">Protect your business with comprehensive security assessments, penetration testing, and risk management strategies.</p>
+                        <h3 class="text-xl font-bold mb-2">Development Team Empowerment</h3>
+                        <p class="text-gray-400">Boost team performance by introducing Agile, DevOps, DevSecOps, and
+                            modern development platforms, enhancing both new and established teams.</p>
                     </div>
                 </div>
-                
-                <!-- Service 3 -->
+
                 <div class="service-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
                     <div class="p-6">
                         <div class="text-blue-400 text-4xl mb-4">
                             <i class="fas fa-code"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Custom Development</h3>
-                        <p class="text-gray-400">Bespoke software solutions designed to streamline your operations and give you a competitive edge.</p>
+                        <p class="text-gray-400">Bespoke software solutions designed to streamline your operations and
+                            give you a competitive edge and deployed on-prem, in the cloud or hybrid.</p>
                     </div>
                 </div>
-                
-                <!-- Service 4 -->
+
                 <div class="service-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
                     <div class="p-6">
                         <div class="text-blue-400 text-4xl mb-4">
                             <i class="fas fa-database"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Data Analytics</h3>
-                        <p class="text-gray-400">Transform your data into actionable insights with our BI and analytics solutions.</p>
+                        <p class="text-gray-400">Transform your data into actionable insights with our BI and analytics
+                            solutions.</p>
                     </div>
                 </div>
-                
-                <!-- Service 5 -->
+
                 <div class="service-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
                     <div class="p-6">
                         <div class="text-blue-400 text-4xl mb-4">
-                            <i class="fas fa-network-wired"></i>
+                            <i class="fas fa-industry"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">IT Infrastructure</h3>
-                        <p class="text-gray-400">Design, implement, and optimize your network infrastructure for maximum performance and reliability.</p>
+                        <h3 class="text-xl font-bold mb-2">Industry 4.0</h3>
+                        <p class="text-gray-400">Seamlessly integrate production lines and machinery with your
+                            enterprise systems through tailored MES solutions, enabling real-time data exchange and
+                            smarter manufacturing.</p>
                     </div>
                 </div>
-                
-                <!-- Service 6 -->
+
                 <div class="service-card bg-gray-800 rounded-lg overflow-hidden shadow-lg">
                     <div class="p-6">
                         <div class="text-blue-400 text-4xl mb-4">
-                            <i class="fas fa-robot"></i>
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">AI & Automation</h3>
-                        <p class="text-gray-400">Leverage artificial intelligence and automation to reduce costs and improve efficiency.</p>
+                        <h3 class="text-xl font-bold mb-2">Cybersecurity</h3>
+                        <p class="text-gray-400">Protect your business with comprehensive security assessments,
+                            penetration testing, and risk management strategies.</p>
                     </div>
                 </div>
             </div>
@@ -192,16 +214,18 @@
     </section>
 
     <!-- Products Section with Parallax -->
-    <section id="products" class="parallax bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] py-20">
+    <section id="products"
+        class="parallax bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] py-20">
         <div class="overlay"></div>
         <div class="relative z-10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Products</h2>
                     <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-                    <p class="text-gray-300 max-w-3xl mx-auto">Innovative software solutions developed to solve real business challenges.</p>
+                    <p class="text-gray-300 max-w-3xl mx-auto">Innovative software solutions developed to solve real
+                        business challenges.</p>
                 </div>
-                
+
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Product 1 -->
                     <div class="bg-gray-900 bg-opacity-80 rounded-lg overflow-hidden shadow-lg p-6">
@@ -211,15 +235,22 @@
                             </div>
                             <h3 class="text-xl font-bold">AnalyticsPro</h3>
                         </div>
-                        <p class="text-gray-300 mb-4">Powerful business intelligence platform that transforms complex data into clear, actionable insights with customizable dashboards and real-time reporting.</p>
+                        <p class="text-gray-300 mb-4">Powerful business intelligence platform that transforms complex
+                            data into clear, actionable insights with customizable dashboards and real-time reporting.
+                        </p>
                         <ul class="text-gray-400 mb-4 space-y-2">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> Real-time data visualization</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> Predictive analytics</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> Custom report generation</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                                Real-time data visualization</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                                Predictive analytics</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> Custom
+                                report generation</li>
                         </ul>
-                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">Learn more <i class="fas fa-arrow-right ml-2"></i></a>
+                        <a href="#contact"
+                            class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">Learn more
+                            <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
-                    
+
                     <!-- Product 2 -->
                     <div class="bg-gray-900 bg-opacity-80 rounded-lg overflow-hidden shadow-lg p-6">
                         <div class="flex items-center mb-4">
@@ -228,13 +259,19 @@
                             </div>
                             <h3 class="text-xl font-bold">SecureGate</h3>
                         </div>
-                        <p class="text-gray-300 mb-4">Comprehensive cybersecurity solution that protects your digital assets with advanced threat detection, encryption, and access control features.</p>
+                        <p class="text-gray-300 mb-4">Comprehensive cybersecurity solution that protects your digital
+                            assets with advanced threat detection, encryption, and access control features.</p>
                         <ul class="text-gray-400 mb-4 space-y-2">
-                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> AI-powered threat detection</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> End-to-end encryption</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> Multi-factor authentication</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                                AI-powered threat detection</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                                End-to-end encryption</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
+                                Multi-factor authentication</li>
                         </ul>
-                        <a href="#contact" class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">Learn more <i class="fas fa-arrow-right ml-2"></i></a>
+                        <a href="#contact"
+                            class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">Learn more
+                            <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
             </div>
@@ -248,42 +285,54 @@
                 <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
                     <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
                     <div class="w-20 h-1 bg-blue-500 mb-6"></div>
-                    <p class="text-gray-400 mb-4">With over 25 years of experience in the IT industry, I've helped businesses of all sizes navigate the complex world of technology.</p>
-                    <p class="text-gray-400 mb-6">My approach combines technical expertise with business acumen to deliver solutions that drive real results. I believe in building long-term relationships with clients based on trust, transparency, and exceptional service.</p>
-                    
+                    <p class="text-gray-400 mb-4">With over 25 years of experience in the IT industry, I've helped
+                        businesses of all sizes navigate the complex world of technology.</p>
+                    <p class="text-gray-400 mb-6">My approach combines technical expertise with business acumen to
+                        deliver solutions that drive real results. I believe in building long-term relationships with
+                        clients based on trust, transparency, and exceptional service.</p>
+
                     <div class="space-y-4">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
                                 <i class="fas fa-check-circle text-blue-400"></i>
                             </div>
-                            <p class="ml-3 text-gray-400">Experienced with major programming languages and enterprise-grade platforms, delivering complex yet robust, high-performance, and scalable solutions.</p>
+                            <p class="ml-3 text-gray-400">Experienced with major programming languages and
+                                enterprise-grade platforms, delivering complex yet robust, high-performance, and
+                                scalable solutions.</p>
                         </div>
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
                                 <i class="fas fa-check-circle text-blue-400"></i>
                             </div>
-                            <p class="ml-3 text-gray-400">Worked with some of Italy’s largest corporations as well as innovative startups.</p>
+                            <p class="ml-3 text-gray-400">Worked with some of Italy’s largest corporations as well as
+                                innovative startups.</p>
                         </div>
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
                                 <i class="fas fa-check-circle text-blue-400"></i>
                             </div>
-                            <p class="ml-3 text-gray-400">University-level instructor for many years, having trained thousands of professionals and teams on emerging technologies and methodologies, and authored books on software development.</p>
-                        </div>                        
+                            <p class="ml-3 text-gray-400">University-level instructor for many years, having trained
+                                thousands of professionals and teams on emerging technologies and methodologies, and
+                                authored books on software development.</p>
+                        </div>
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
                                 <i class="fas fa-check-circle text-blue-400"></i>
                             </div>
-                            <p class="ml-3 text-gray-400">Passionate about solving complex problems with elegant solutions</p>
+                            <p class="ml-3 text-gray-400">Passionate about solving complex problems with elegant
+                                solutions</p>
                         </div>
                     </div>
                 </div>
                 <div class="lg:w-1/2">
                     <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="IT Consultant" class="w-full h-auto">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                            alt="IT Consultant" class="w-full h-auto">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Why Work With Me?</h3>
-                            <p class="text-gray-400">As an independent consultant, you get direct access to senior-level expertise without the overhead of a large firm. My focus is entirely on your success.</p>
+                            <p class="text-gray-400">As an independent consultant, you get direct access to senior-level
+                                expertise without the overhead of a large firm. My focus is entirely on your success.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -292,7 +341,7 @@
     </section>
 
     <!-- Testimonials Section with Parallax -->
-    <section class="parallax bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] py-20">
+    <!-- <section class="parallax bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] py-20">
         <div class="overlay"></div>
         <div class="relative z-10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -302,7 +351,6 @@
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Testimonial 1 -->
                     <div class="bg-gray-900 bg-opacity-80 rounded-lg p-6">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -323,7 +371,6 @@
                         </div>
                     </div>
                     
-                    <!-- Testimonial 2 -->
                     <div class="bg-gray-900 bg-opacity-80 rounded-lg p-6">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -344,7 +391,6 @@
                         </div>
                     </div>
                     
-                    <!-- Testimonial 3 -->
                     <div class="bg-gray-900 bg-opacity-80 rounded-lg p-6">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -367,7 +413,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-900">
@@ -375,34 +421,45 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
                 <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-3xl mx-auto">Ready to discuss your project or learn more about our services? Contact me today.</p>
+                <p class="text-gray-400 max-w-3xl mx-auto">Ready to discuss your project or learn more about our
+                    services? Contact me today.</p>
             </div>
-            
+
             <div class="flex flex-col lg:flex-row gap-10">
                 <div class="lg:w-1/2">
                     <form class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your name">
+                            <input type="text" id="name" name="name"
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="Your name">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your.email@example.com">
+                            <input type="email" id="email" name="email"
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="your.email@example.com">
                         </div>
                         <div>
                             <label for="subject" class="block text-sm font-medium text-gray-300 mb-1">Subject</label>
-                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="What's this about?">
+                            <input type="text" id="subject" name="subject"
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="What's this about?">
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your message"></textarea>
+                            <textarea id="message" name="message" rows="5"
+                                class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="Your message"></textarea>
                         </div>
                         <div>
-                            <button type="submit" class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition duration-300">Send Message</button>
+                            <button type="submit"
+                                class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition duration-300">Send
+                                Message</button>
                         </div>
                     </form>
                 </div>
-                
+
                 <div class="lg:w-1/2">
                     <div class="bg-gray-800 rounded-lg p-8 h-full">
                         <h3 class="text-xl font-bold mb-6">Contact Information</h3>
@@ -444,17 +501,20 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="mt-8">
                             <h3 class="text-xl font-bold mb-4">Follow Me</h3>
                             <div class="flex space-x-4">
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-blue-500 transition duration-300">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-blue-400 transition duration-300">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-blue-400 transition duration-300">
                                     <i class="fab fa-twitter"></i>
                                 </a>
-                                <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition duration-300">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition duration-300">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
@@ -486,10 +546,12 @@
             </div>
         </div>
     </footer>
+    <!-- Container dei toast -->
+    <div id="toast-container" class="fixed top-4 right-4 space-y-2"></div>
 
     <script>
         // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
@@ -498,17 +560,17 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     // Close mobile menu if open
                     const mobileMenu = document.getElementById('mobile-menu');
                     if (!mobileMenu.classList.contains('hidden')) {
                         mobileMenu.classList.add('hidden');
                     }
-                    
+
                     // Scroll to target
                     window.scrollTo({
                         top: targetElement.offsetTop - 80,
@@ -519,7 +581,7 @@
         });
 
         // Add shadow to navbar on scroll
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
                 nav.classList.add('shadow-lg');
@@ -527,6 +589,48 @@
                 nav.classList.remove('shadow-lg');
             }
         });
+
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `max-w-xs p-4 rounded-lg shadow-lg text-white ${type === 'success' ? 'bg-green-500' :
+                    type === 'error' ? 'bg-red-500' :
+                        'bg-blue-500'
+                }`;
+            toast.textContent = message;
+            document.getElementById('toast-container').appendChild(toast);
+            setTimeout(() => toast.remove(), 4000);
+        }
+
+        document.querySelector('form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const form = e.target;
+            const data = {
+                name: form.name.value,
+                email: form.email.value,
+                subject: form.subject.value,
+                message: form.message.value
+            };
+
+            try {
+                const res = await fetch('http://bkstats-api.colleoni.info/api/utils/mailer/colleoni-info', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await res.json();
+                if (result.success) {
+                    showToast('Message sent! Check your inbox.', 'success');
+                    form.reset();
+                } else {
+                    showToast('Error: ' + (result.error || 'Failed to send'), 'error');
+                }
+            } catch (err) {
+                showToast('Network error: ' + err.message, 'error');
+            }
+        });        
     </script>
 </body>
+
 </html>
