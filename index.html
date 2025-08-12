@@ -66,12 +66,23 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5V5P2ETJL"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-C5V5P2ETJL');
+    gtag('config', 'G-C5V5P2ETJL');
+
+    const langPref = sessionStorage.getItem('langPreference');
+
+    if (!langPref) {
+        const userLang = navigator.language || navigator.userLanguage;
+        sessionStorage.setItem('langPreference', userLang);
+        if (userLang.startsWith('it')) {
+            window.location.href = '/it/index.html';
+        }
+    } 
 </script>
+
 <body class="font-sans antialiased text-gray-100">
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-90 transition-all duration-300">
@@ -94,7 +105,7 @@
                             class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400">Contact</a>
                         <!-- Switch lingua -->
                         <a href="it/index.html" title="Italiano" class="px-2"><span class="text-lg">🇮🇹</span></a>
-                        <a href="index.html" title="English" class="px-2"><span class="text-lg">🇬🇧</span></a>                            
+                        <a href="index.html" title="English" class="px-2"><span class="text-lg">🇬🇧</span></a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -253,7 +264,7 @@
                                 Real-time statistics visualization for players, parents or fans </li>
                             <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
                                 Multi tenant Teams and Players management</li>
-                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> 
+                            <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
                                 Activities calendars and maps of events</li>
                         </ul>
                         <a href="#contact"
@@ -269,11 +280,13 @@
                             </div>
                             <h3 class="text-xl font-bold">WOW.Contact</h3>
                         </div>
-                        <p class="text-gray-300 mb-4">A powerful messaging automation tool, leveraging pervasive WhatsApp 
+                        <p class="text-gray-300 mb-4">A powerful messaging automation tool, leveraging pervasive
+                            WhatsApp
                             presence.</p>
                         <ul class="text-gray-400 mb-4 space-y-2">
                             <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
-                                Send customizable message templates, with traceable links and attachments to many contacts and keep reports</li>
+                                Send customizable message templates, with traceable links and attachments to many
+                                contacts and keep reports</li>
                             <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
                                 Scheduled sending</li>
                             <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
@@ -336,8 +349,8 @@
                 </div>
                 <div class="lg:w-1/2">
                     <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
-                        <img src="img/0b6d8d57-56a7-4e0a-a18b-5cce20aa91c4.jpeg"
-                            alt="IT Consultant" class="w-full h-auto">
+                        <img src="img/0b6d8d57-56a7-4e0a-a18b-5cce20aa91c4.jpeg" alt="IT Consultant"
+                            class="w-full h-auto">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Why Work With Me?</h3>
                             <p class="text-gray-400">As an independent consultant, you get direct access to senior-level

@@ -66,12 +66,23 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5V5P2ETJL"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-C5V5P2ETJL');
+    gtag('config', 'G-C5V5P2ETJL');
+
+    const langPref = sessionStorage.getItem('langPreference');
+
+    if (!langPref) {
+        const userLang = navigator.language || navigator.userLanguage;
+        sessionStorage.setItem('langPreference', userLang);
+        if (!userLang.startsWith('it')) {
+            window.location.href = '/';
+        }
+    }
 </script>
+
 <body class="font-sans antialiased text-gray-100">
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-gray-900 bg-opacity-90 transition-all duration-300">
@@ -94,7 +105,7 @@
                             class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-blue-400">Contatti</a>
                         <!-- Switch lingua -->
                         <a href="index.html" title="Italiano" class="px-2"><span class="text-lg">🇮🇹</span></a>
-                        <a href="../index.html" title="English" class="px-2"><span class="text-lg">🇬🇧</span></a> 
+                        <a href="../index.html" title="English" class="px-2"><span class="text-lg">🇬🇧</span></a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -115,7 +126,8 @@
                     class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">Servizi</a>
                 <a href="#products"
                     class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">Prodotti</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">Chi sono</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">Chi
+                    sono</a>
                 <a href="#contact"
                     class="block px-3 py-2 rounded-md text-base font-medium hover:text-blue-400">Contatti</a>
 
@@ -133,10 +145,12 @@
         <div class="overlay"></div>
         <div class="relative z-10 flex flex-col justify-center items-center h-full text-center px-4">
             <h1 class="text-4xl md:text-6xl font-bold mb-6">Soluzioni Software Innovative</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl">Offriamo servizi e prodotti tecnologici all'avanguardia per aiutare la tua azienda a prosperare nell'era digitale.</p>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl">Offriamo servizi e prodotti tecnologici all'avanguardia per
+                aiutare la tua azienda a prosperare nell'era digitale.</p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#services"
-                    class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition duration-300">I nostri servizi</a>
+                    class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition duration-300">I
+                    nostri servizi</a>
                 <a href="#contact"
                     class="px-8 py-3 bg-transparent border-2 border-blue-400 hover:bg-blue-400 hover:bg-opacity-10 rounded-lg font-semibold transition duration-300">Contattami</a>
             </div>
@@ -149,7 +163,8 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">I nostri servizi di consulenza IT</h2>
                 <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-3xl mx-auto">Forniamo soluzioni IT complete e personalizzate in base alle esigenze della tua azienda.</p>
+                <p class="text-gray-400 max-w-3xl mx-auto">Forniamo soluzioni IT complete e personalizzate in base alle
+                    esigenze della tua azienda.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -160,7 +175,9 @@
                             <i class="fas fa-project-diagram"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Leadership per progetti software</h3>
-                        <p class="text-gray-400">Dall'analisi e progettazione alla scelta della metodologia e all'implementazione completa del ciclo di vita del software (SDLC), guidando i team per consegnare progetti di successo con controllo e trasparenza.</p>
+                        <p class="text-gray-400">Dall'analisi e progettazione alla scelta della metodologia e
+                            all'implementazione completa del ciclo di vita del software (SDLC), guidando i team per
+                            consegnare progetti di successo con controllo e trasparenza.</p>
                     </div>
                 </div>
 
@@ -170,7 +187,8 @@
                             <i class="fas fa-users-cog"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Potenziare i team di sviluppo</h3>
-                        <p class="text-gray-400">Migliora le prestazioni del team introducendo Agile, DevOps, DevSecOps e piattaforme di sviluppo moderne, valorizzando sia i team nuovi che quelli consolidati.</p>
+                        <p class="text-gray-400">Migliora le prestazioni del team introducendo Agile, DevOps, DevSecOps
+                            e piattaforme di sviluppo moderne, valorizzando sia i team nuovi che quelli consolidati.</p>
                     </div>
                 </div>
 
@@ -180,7 +198,9 @@
                             <i class="fas fa-code"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Sviluppo su misura</h3>
-                        <p class="text-gray-400">Soluzioni software personalizzate progettate per ottimizzare le tue operazioni e darti un vantaggio competitivo; distribuite on-premise, nel cloud o in modalità ibrida.</p>
+                        <p class="text-gray-400">Soluzioni software personalizzate progettate per ottimizzare le tue
+                            operazioni e darti un vantaggio competitivo; distribuite on-premise, nel cloud o in modalità
+                            ibrida.</p>
                     </div>
                 </div>
 
@@ -190,7 +210,8 @@
                             <i class="fas fa-database"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Analisi dei dati</h3>
-                        <p class="text-gray-400">Trasforma i tuoi dati in insight utili con le nostre soluzioni di Business Intelligence e analytics.</p>
+                        <p class="text-gray-400">Trasforma i tuoi dati in insight utili con le nostre soluzioni di
+                            Business Intelligence e analytics.</p>
                     </div>
                 </div>
 
@@ -200,7 +221,9 @@
                             <i class="fas fa-industry"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Industria 4.0</h3>
-                        <p class="text-gray-400">Integra linee di produzione e macchinari con i sistemi aziendali tramite soluzioni MES su misura, abilitando lo scambio dati in tempo reale e una produzione più intelligente.</p>
+                        <p class="text-gray-400">Integra linee di produzione e macchinari con i sistemi aziendali
+                            tramite soluzioni MES su misura, abilitando lo scambio dati in tempo reale e una produzione
+                            più intelligente.</p>
                     </div>
                 </div>
 
@@ -210,7 +233,8 @@
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Sicurezza informatica</h3>
-                        <p class="text-gray-400">Proteggi la tua azienda con valutazioni di sicurezza complete, penetration test e strategie di gestione del rischio.</p>
+                        <p class="text-gray-400">Proteggi la tua azienda con valutazioni di sicurezza complete,
+                            penetration test e strategie di gestione del rischio.</p>
                     </div>
                 </div>
             </div>
@@ -226,7 +250,8 @@
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">I nostri prodotti</h2>
                     <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-                    <p class="text-gray-300 max-w-3xl mx-auto">Soluzioni software innovative sviluppate per risolvere sfide reali di business.</p>
+                    <p class="text-gray-300 max-w-3xl mx-auto">Soluzioni software innovative sviluppate per risolvere
+                        sfide reali di business.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -249,7 +274,8 @@
                                 Calendari attività e mappe degli eventi</li>
                         </ul>
                         <a href="#contact"
-                            class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">Scopri di più
+                            class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">Scopri di
+                            più
                             <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
 
@@ -261,17 +287,20 @@
                             </div>
                             <h3 class="text-xl font-bold">WOW.Contact</h3>
                         </div>
-                        <p class="text-gray-300 mb-4">Uno strumento potente di automazione dei messaggi, che sfrutta la pervasività di WhatsApp.</p>
+                        <p class="text-gray-300 mb-4">Uno strumento potente di automazione dei messaggi, che sfrutta la
+                            pervasività di WhatsApp.</p>
                         <ul class="text-gray-400 mb-4 space-y-2">
                             <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
-                                Invia modelli di messaggio personalizzabili, con link tracciabili e allegati a molti contatti e conserva report</li>
+                                Invia modelli di messaggio personalizzabili, con link tracciabili e allegati a molti
+                                contatti e conserva report</li>
                             <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
                                 Invio programmato</li>
                             <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i>
                                 Gestione risposte, con autoresponder e BOT</li>
                         </ul>
                         <a href="#contact"
-                            class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">Scopri di più
+                            class="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center">Scopri di
+                            più
                             <i class="fas fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
@@ -286,43 +315,54 @@
                 <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
                     <h2 class="text-3xl md:text-4xl font-bold mb-6">Chi sono</h2>
                     <div class="w-20 h-1 bg-blue-500 mb-6"></div>
-                    <p class="text-gray-400 mb-4">In oltre 25 anni di esperienza nel settore IT, ho aiutato aziende di tutte le dimensioni a orientarsi nel complesso mondo della tecnologia.</p>
-                    <p class="text-gray-400 mb-6">Il mio approccio combina competenze tecniche con sensibilità di business per fornire soluzioni che producono risultati concreti. Credo nelle relazioni a lungo termine basate su fiducia, trasparenza e servizio eccellente.</p>
+                    <p class="text-gray-400 mb-4">In oltre 25 anni di esperienza nel settore IT, ho aiutato aziende di
+                        tutte le dimensioni a orientarsi nel complesso mondo della tecnologia.</p>
+                    <p class="text-gray-400 mb-6">Il mio approccio combina competenze tecniche con sensibilità di
+                        business per fornire soluzioni che producono risultati concreti. Credo nelle relazioni a lungo
+                        termine basate su fiducia, trasparenza e servizio eccellente.</p>
 
                     <div class="space-y-4">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
                                 <i class="fas fa-check-circle text-blue-400"></i>
                             </div>
-                            <p class="ml-3 text-gray-400">Esperienza con i principali linguaggi di programmazione e piattaforme enterprise, fornendo soluzioni complesse ma robuste, ad alte prestazioni e scalabili.</p>
+                            <p class="ml-3 text-gray-400">Esperienza con i principali linguaggi di programmazione e
+                                piattaforme enterprise, fornendo soluzioni complesse ma robuste, ad alte prestazioni e
+                                scalabili.</p>
                         </div>
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
                                 <i class="fas fa-check-circle text-blue-400"></i>
                             </div>
-                            <p class="ml-3 text-gray-400">Ho collaborato con alcune delle più grandi aziende italiane e con startup innovative.</p>
+                            <p class="ml-3 text-gray-400">Ho collaborato con alcune delle più grandi aziende italiane e
+                                con startup innovative.</p>
                         </div>
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
                                 <i class="fas fa-check-circle text-blue-400"></i>
                             </div>
-                            <p class="ml-3 text-gray-400">Docente a livello universitario per molti anni, ho formato migliaia di professionisti e team su tecnologie e metodologie emergenti, e sono autore di testi sullo sviluppo software.</p>
+                            <p class="ml-3 text-gray-400">Docente a livello universitario per molti anni, ho formato
+                                migliaia di professionisti e team su tecnologie e metodologie emergenti, e sono autore
+                                di testi sullo sviluppo software.</p>
                         </div>
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
                                 <i class="fas fa-check-circle text-blue-400"></i>
                             </div>
-                            <p class="ml-3 text-gray-400">Appassionato nel risolvere problemi complessi con soluzioni eleganti.</p>
+                            <p class="ml-3 text-gray-400">Appassionato nel risolvere problemi complessi con soluzioni
+                                eleganti.</p>
                         </div>
                     </div>
                 </div>
                 <div class="lg:w-1/2">
                     <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl">
-                        <img src="../img/0b6d8d57-56a7-4e0a-a18b-5cce20aa91c4.jpeg"
-                            alt="Consulente IT" class="w-full h-auto">
+                        <img src="../img/0b6d8d57-56a7-4e0a-a18b-5cce20aa91c4.jpeg" alt="Consulente IT"
+                            class="w-full h-auto">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Perché lavorare con me?</h3>
-                            <p class="text-gray-400">Come consulente indipendente, avrai accesso diretto a competenze di alto livello senza l'onere di una grande società. Il mio focus è interamente sul tuo successo.</p>
+                            <p class="text-gray-400">Come consulente indipendente, avrai accesso diretto a competenze di
+                                alto livello senza l'onere di una grande società. Il mio focus è interamente sul tuo
+                                successo.</p>
                         </div>
                     </div>
                 </div>
@@ -411,7 +451,8 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Contattami</h2>
                 <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-3xl mx-auto">Pronto a discutere il tuo progetto o a saperne di più sui nostri servizi? Contattami oggi stesso.</p>
+                <p class="text-gray-400 max-w-3xl mx-auto">Pronto a discutere il tuo progetto o a saperne di più sui
+                    nostri servizi? Contattami oggi stesso.</p>
             </div>
 
             <div class="flex flex-col lg:flex-row gap-10">
@@ -443,7 +484,8 @@
                         </div>
                         <div>
                             <button type="submit"
-                                class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition duration-300">Invia Messaggio</button>
+                                class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition duration-300">Invia
+                                Messaggio</button>
                         </div>
                     </form>
                 </div>
